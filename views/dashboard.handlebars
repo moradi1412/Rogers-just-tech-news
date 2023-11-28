@@ -1,0 +1,49 @@
+<section class="myProfile">
+
+  <p>Welcome to your portal </p>
+</section>
+
+    <h2>Your Posts</h2>
+<div class="row">
+
+  <div class="column">
+                  {{#if posts.length}}
+                  
+              
+
+                  {{#each posts}}
+
+                  <div class="posts-you">
+
+                    {{!-- {{ post-info post}} --}}
+                    <div class="notes">
+                      <p> Title: {{title}}</p>
+                      <P> Details : {{details}}</P>
+                      <P> Location:</P>
+                      <p> Date: </p>
+                      <button> cancel</button>
+                    </div>
+                  </div>
+
+                {{/each}}
+                {{/if}}
+  </div>
+
+    <div class="your-info column ">
+      <P> Name: </P>
+      <p> Contant Info: </p>
+      <p> your interest: </p>
+    </div>
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+<script src="/javascript/add-post.js"></script>

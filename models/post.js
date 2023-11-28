@@ -15,6 +15,7 @@ class Post extends Model {
           'id',
           'post_url',
           'title',
+          'details',
           'created_at',
           [
             sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
@@ -49,6 +50,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    details: {
+      type: DataTypes.STRING,
+      allowNull : false 
+    }, 
     post_url: {
       type: DataTypes.STRING,
       allowNull: false,
