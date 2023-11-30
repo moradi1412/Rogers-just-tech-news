@@ -43,11 +43,19 @@ router.get('/', (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/login');
     return;
   }
 
   res.render('login');
+});
+
+router.get('/about', (req, res) => {
+  res.render('about');
+});
+
+router.get('/cal', (req, res) => {
+  res.render('cal');
 });
 
 

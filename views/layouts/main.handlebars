@@ -7,13 +7,13 @@
   <title>Sac State Volunteer system</title>
   {{!--
   <link rel="stylesheet" href="/stylesheets/style.css"> --}}
-  {{!--
-  <link rel="stylesheet" href="/stylesheets/normaliz.css" type="text/css"> --}}
+  
+  <link rel="stylesheet" href="/stylesheets/normaliz.css" type="text/css">
   <link rel="stylesheet" href="/stylesheets/design.css" type="text/css">
   {{!--
   <link rel="stylesheet" href="/stylesheets/listGlobals.css" /> --}}
-  {{!--
-  <link rel="stylesheet" href="/stylesheets/listStyleguide.css" /> --}}
+
+  <link rel="stylesheet" href="/stylesheets/listStyleguide.css" />
 
   {{!--
   <link rel="stylesheet" href="/stylesheets/listStyle.css" /> --}}
@@ -37,22 +37,23 @@
 
 <body>
 
-  <header class="header">
-    <div class='topnav'>
-      <a class="active" href="/">Home</a>
+  <header class="header topnav">
+    <a class="active" href="/">Home</a>
+     
      {{#if loggedIn}}
+       
         <a href="/dashboard">dashboard</a>
         <a href="/" id="logout">logout</button>
+        
         {{else}}
+    
         <a href="/login">login</a>
         {{/if}}
       {{!-- <a href="./profile.html">My Profile</a> --}}
-      <a href="./aboutUs.html">About Us</a>
-      <a href="./calendar.html">Calender</a>
-      <a class="logo" href="https://www.csus.edu/student-life/career-center/">
-        <img src="/images/SacramentoStateLogo.png" class="Sacramento State Logo" width="54" height="54" />
-      </a>
-    </div>
+      <a href="/about">About Us</a>
+      <a href="/cal">Calender</a>
+      <img src="/images/SacramentoStateLogo.png" class="SacramentoStateLogo" width="54" height="54" />
+      
   </header>
 
   <main>
@@ -71,9 +72,8 @@
 </footer>
 
 
- {{#if loggedIn}}
+
   <script src="/javascript/logout.js"></script>
-  {{/if}}
 </body>
 
 </html>
